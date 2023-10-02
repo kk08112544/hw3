@@ -1,24 +1,12 @@
-// module.exports = {
-//     HOST: "localhost",
-//     USER: "root",
-//     PASSWORD: "",
-//     DB: "dump_db"
-// };
-const mysql = require('mysql2')
-
-const pool = mysql.createPool({
-    host: process.env.DB_HOST, 
-    user: process.env.DB_USERNAME, 
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DBNAME,
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0
-});
-
-pool.getConnection((err, conn) => {
-    if(err) console.log(err)
-    console.log("Connected successfully")
-})
-
-module.exports = pool.promise()
+module.exports = {
+    // HOST: "localhost",
+    //   USER: "root",
+    //   PASSWORD: "",
+    //   DB: "test",
+  
+    HOST: "sql.freedb.tech",
+    USER: "freedb_freedb_myapi_db_test",
+    PASSWORD: "U5BXf#yV!D@G3g2",
+    PORT: 3306,
+    DB: "freedb_ManageAccount",
+  };
